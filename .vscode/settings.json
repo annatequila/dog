@@ -1,4 +1,17 @@
 {
     "python-envs.defaultEnvManager": "ms-python.python:conda",
-    "python-envs.defaultPackageManager": "ms-python.python:conda"
+    "python-envs.defaultPackageManager": "ms-python.python:conda",
+
+
+    
+    "editor.indentGuides.enabled": true,
+    "editor.indentGuides.activeIndentGuide": true,
+     "workbench.colorCustomizations": {
+    // 普通层级参考线：使用较高不透明度的颜色（如 #404040ff 或 #808080aa）
+    "editorIndentGuide.background1": "#f44040fe", 
+    // 当前活动层级参考线：使用实心高亮色，模拟最粗/最醒目效果
+    "editorIndentGuide.activeBackground1": "#ffffff" 
 }
+
+}
+
