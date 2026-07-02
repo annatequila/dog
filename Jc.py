@@ -44,6 +44,21 @@ class Point:
         return Point(self.x * scalar, self.y * scalar)
 
 
+class lingdao:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        self.xiashu = yuangong(self.name, self.age, 10000)
+        print(f'领导年龄{self.age}')
+    @classmethod
+    def ss(cls,sui):
+        cls.sui= sui
+        print('类方法')
+        print(cls.sui)
+    @staticmethod
+    def tt(age):
+        print(f'静态方法，年龄：{age}')
+
 
 # a = yuangong('小明', 18, 5000)
 # a.show()
@@ -66,3 +81,7 @@ print("p1 + p2:", p1 + p2)
 print("p2 - p1:", p2 - p1)
 print("p1 * 3:", p1 * 3)
 
+d = lingdao('王总', 50)
+d.xiashu.show_sa()
+d.ss(5)
+d.tt(34)
