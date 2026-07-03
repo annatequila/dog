@@ -60,9 +60,9 @@ class lingdao:
         print(f'静态方法，年龄：{age}')
 
 
-# a = yuangong('小明', 18, 5000)
-# a.show()
-# a.show_sa()
+a = yuangong('小明', 18, 5000)
+a.show()
+a.show_sa()
 
 b = [yuangong('小红', 20, 6000), yuangong('小李', 22, 7000),    yuangong('小刚', 24, 8000)]
 for bb in b:
