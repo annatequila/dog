@@ -74,3 +74,7 @@ class dog:
 
 d = dog('小黑', 3)
 d.bark()
+
+d.name = '小白'
+d.age = 4
+d.bark()    
