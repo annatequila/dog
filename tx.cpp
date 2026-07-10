@@ -5,9 +5,17 @@
 #include <climits>
 //  ****************************
 #include "cir.h"
-
+#include "cir.cpp"
+int add(int x, int y);
 
 using namespace std;
+
+    //类作用域
+class My{
+    public:
+    static int cha ;
+};
+int My::cha =25;
 
 int main() {
 
@@ -40,6 +48,29 @@ int main() {
    // int x=0;
    // std::cin >> x;
    // std::cout << x << endl;
+    std::cout << add(3,5) <<endl;
 
+    // 匿名函数
+   auto add = [](double a, double b) {
+
+    return a + b;
+
+    };
+
+    // 使用 Lambda 表达式计算两个数的和
+
+    double sum = add(10.2, 20.3);
+
+    std::cout << "Sum is: " << sum << std::endl; 
+    //内部作用域与外部作用域的区别
+     int a = 10;
+    {
+        int a = 20;  // 块作用域变量
+        std::cout << "块变量: " << a << std::endl;
+    }
+    std::cout << "外部变量: " << a << std::endl;
+
+   
+  std::cout << "外部变量: " << My::cha << std::endl;
     return 0;
 }

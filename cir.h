@@ -10,7 +10,7 @@
 #ifndef CIR_H
 
 #define CIR_H
-
+const int MXa =1000;
 namespace Cir{
 
 const double PI = 3.141592653;
@@ -28,6 +28,9 @@ return 2*PI*radius;
 }
 
 }
+
+
+int add(int x, int y);
 
 #endif // CIR_H 
 
