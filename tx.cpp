@@ -15,6 +15,8 @@ class My{
     public:
     static int cha ;
 };
+
+
 int My::cha =25;
 
 int main() {
@@ -71,6 +73,6 @@ int main() {
     std::cout << "外部变量: " << a << std::endl;
 
    
-  std::cout << "外部变量: " << My::cha << std::endl;
-    return 0;
+    std::cout << "外部变量: " << My::cha << std::endl;
+        return 0;
 }
