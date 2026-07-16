@@ -20,6 +20,7 @@ public:
 
 };
  
+
 Line::Line(const Line &obj)
 {
     cout << "调用拷贝构造函数并为指针 ptr 分配内存" << endl;
@@ -61,18 +62,50 @@ void priF(Line len){
     std::cout << len.length << endl;
 }
 
-
-
+Line* pr = nullptr;
+int* prz = new int;
 // 程序的主函数
 int main()
 {
     Line line(10);
- 
-    // 设置长度
-    line.setLength(6.0);
-    
+    line.setLength(6);
+
+    cout << "\n===== 演示全局类指针 Line* pr 操作 =====" << endl;
+    // ① 先判断空指针，不能直接使用nullptr
+    if (pr == nullptr)
+    {
+        cout << "pr当前是空指针nullptr，不能直接解引用！" << endl;
+    }
+
+    pr = &line;
+
+    cout << "Length of pr.line : " << pr->getLength() << endl;
+
+    pr->setLength(32);
     cout << "Length of line : " << line.getLength() << endl;
+
     priF( line);
     display(line);
+
+    Line* pr1 = new Line(111);
+// pr 是外部指针，指向堆上这个Line对象
+    Line pr2(112);
+
+    Line* pr3 = pr1;
+    //pr3 = pr1;
+    
+    // pr3->setLength(113);
+
+    cout << "pr1 : " << pr1->getLength() << endl;
+    cout << "pr2 : " << pr2.getLength() << endl;
+
+    //cout << "pr1 : " << &pr1  << endl;
+
+    cout << "pr3 : " << pr3->getLength()  << endl;
+
+    // cout << "pr2 : " << &pr2  << endl;
+    delete pr1;
     return 0;
+
+
 }
