@@ -1,6 +1,8 @@
 
 #include <iostream>
 
+//链
+
 using namespace std;
 
 struct Node {

@@ -4,7 +4,8 @@
 #include <locale>
 #include <climits>
 
-// ========== 两种类成员函数定义 ==========
+//   两种类成员函数定义 ==========
+//  类继承  ==========
 class box
 {
     public:

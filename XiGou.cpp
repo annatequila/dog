@@ -1,7 +1,9 @@
 #include <iostream>
  
 using namespace std;
- 
+// 构造函数与析构函数   实现
+// 友元函数  实现
+// 调用拷贝构造函数
 class Line
 {
     private:
@@ -14,6 +16,7 @@ public:
     void   setLength(double len);
     double getLength() ;
     Line( const Line &obj);  
+
     friend void priF(Line len);
     ~Line(void); // 析构函数是程序结束时 自动执行的
     
@@ -88,6 +91,8 @@ int main()
     display(line);
 
     Line* pr1 = new Line(111);
+
+
 // pr 是外部指针，指向堆上这个Line对象
     Line pr2(112);
 
@@ -99,13 +104,9 @@ int main()
     cout << "pr1 : " << pr1->getLength() << endl;
     cout << "pr2 : " << pr2.getLength() << endl;
 
-    //cout << "pr1 : " << &pr1  << endl;
 
     cout << "pr3 : " << pr3->getLength()  << endl;
 
-    // cout << "pr2 : " << &pr2  << endl;
     delete pr1;
     return 0;
-
-
 }
