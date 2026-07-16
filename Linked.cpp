@@ -22,7 +22,7 @@ int main() {
     cout << "a->next中存放的地址a：" << a->next << endl;
 
  // 栈上创建节点b
-    Node b{11, nullptr};
+    Node b{11, a->next};
 
     cout << "节点b的内存地址：" << &b << endl;
     cout << "a->next中存放的地址b：" << b.next << endl;
