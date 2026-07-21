@@ -25,8 +25,8 @@
         },
         {
             "type": "cppbuild",
-            "label": "C/C++: g++ 生成活动文件",
-            "command": "/usr/bin/g++",
+            "label": "C/C++: gcc 生成活动文件",
+            "command": "/usr/bin/gcc",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
